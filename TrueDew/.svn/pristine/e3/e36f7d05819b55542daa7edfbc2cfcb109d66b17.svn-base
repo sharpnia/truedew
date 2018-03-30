@@ -1,0 +1,44 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>회원가입</title>
+</head>
+<body>
+	<table border="1px">
+		<tr>
+			<td>ID</td>
+			<td><input></td>
+		</tr>
+		<tr>
+			<td>PW</td>
+			<td><input></td>
+		</tr>
+		<tr>
+			<td>PW확인</td>
+			<td><input></td>
+		</tr>
+		<tr>
+			<td>이메일</td>
+			<td><input>@<input></td>
+		</tr>
+		<tr>
+			<td>주소</td>
+			<td><input></td>
+		</tr>
+		<tr>
+			<td>주민등록번호 앞자리</td>
+			<td><input></td>
+		</tr>
+		<tr>
+			<td>폰번호</td>
+			<td><select><option>010</option><option>017</option><option>018</option><option>019</option></select>-<input>-<input></td>
+		</tr>
+		<tr>
+			<td colspan="2"><button onclick="">가입하기</button></td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,59 @@
+@charset "EUC-KR";
+
+body{
+	margin: 0px;
+	padding: 0px;
+
+}
+
+#mainimg{
+	max-width: 300px;
+	max-height: 80px;
+}
+
+.titletd1{
+	margin-left:auto;
+	width: 800px;
+	height:70px;
+	padding-left: 15px;
+}
+
+table {
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	border-spacing: 0px;
+}
+#mainMenu{
+	background-color:#aaaaaa;
+	height: 40px;
+	border-radius:10px;
+	box-shadow: 5px 5px 5px #01579B99;
+	margin-top: 80px;
+}
+
+.logimg{
+	max-height: 15px;
+}
+
+.logininput{
+	width: 100px;
+    
+}
+.menuimg{
+	max-height: 50px;
+}
+a{
+	text-decoration: none;
+	
+}
+
+
+.homeimg{
+	max-height: 300px;
+	padding-top: 100px;
+}
+}
+#logintable{
+	margin-top: 20px;
+}

@@ -1,0 +1,83 @@
+@charset "EUC-KR";
+
+#jointable {
+	background-color:#dcdcdc;
+	margin: auto;
+	margin-top: 100px;
+	border:#aaaaaa solid 3px;
+	width: 1000px;
+	padding-top: 25px;
+	box-shadow: 5px 5px #aaaaaa;
+	border-radius: 15px;
+}
+
+#jointr1 {
+	text-align: center;
+	padding: auto;
+}
+
+.joinb{
+	height: 30px;
+}
+
+.jointr {
+	
+	
+	text-indent: 80px;
+	font-size: 15pt;
+	font-weight: 500;
+	height: 50px;
+	text-decoration: none;
+}
+
+.inputbox {
+	width:300px;
+	height: 25px;
+	padding: 2px 2px 2px 2px; /* ╩С, ©Л, аб, го */
+	text-align: left;
+	border: #323232 1px solid;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	background-color: #dcdcdc;
+	color: black;
+	font-size: 15pt;
+	font-weight: normal;
+	font-style: normal;
+}
+.inputbox:focus {
+	outline:none;
+}
+.inputbox2:focus {
+	outline:none;
+}
+.inputbox2{
+	width:120px;
+	height: 25px;
+	padding: 2px 2px 2px 2px; /* ╩С, ©Л, аб, го */
+	text-align: left;
+	border: #323232 1px solid;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	background-color: #dcdcdc;
+	color: black;
+	font-size: 15pt;
+	font-weight: normal;
+	font-style: normal;
+}
+input::-webkit-input-placeholder { color: white; font-size:12pt; text-indent:10px; }
+
+
+}
+#joinbtn{
+	height: 30px;
+	width: 70px;
+}
+
+.img2{
+	height: 30px;
+} 
+.btn{
+	height: 10px;
+}

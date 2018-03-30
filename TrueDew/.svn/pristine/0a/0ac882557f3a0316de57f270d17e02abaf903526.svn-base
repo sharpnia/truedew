@@ -1,0 +1,79 @@
+package com.td.truedew.join;
+
+import java.net.URLEncoder;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.oreilly.servlet.MultipartRequest;
+import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
+import com.td.truedew.util.DBManager;
+
+public class MemberDAO {
+	private static final MemberDAO MDAO = new MemberDAO();
+
+	public MemberDAO() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static MemberDAO getMdao() {
+		return MDAO;
+	}
+
+	public void join(HttpServletRequest request, HttpServletResponse response) {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		try {
+			con = DBManager.connect();
+
+			String td_member_id = request.getParameter("td_member_id");
+			String td_member_pw = request.getParameter("td_member_pw");
+			// String im_pwChk = mr.getParameter("im_pwChk");
+			String td_member_name = request.getParameter("td_member_name");
+			String td_member_email = request.getParameter("td_member_email");
+			String td_member_addr = request.getParameter("td_member_addr");
+			String td_member_pn = request.getParameter("td_member_pn"); // "주민번호"
+			String td_member_phone1 = request.getParameter("td_member_phone1"); // "주민번호"
+			String td_member_phone2 = request.getParameter("td_member_phone2"); // "주민번호"
+			String td_member_phone3 = request.getParameter("td_member_phone3"); // "주민번호"
+		
+			System.out.println(td_member_id);
+			System.out.println(td_member_pw);
+			System.out.println(td_member_name);
+			System.out.println(td_member_email);
+			System.out.println(td_member_addr);
+			System.out.println(td_member_pn);
+			System.out.println(td_member_phone1);
+			System.out.println(td_member_phone2);
+			System.out.println(td_member_phone3);
+			
+
+			String sql = "insert into TD_MEMBER values(?,?,?,?,?,?,?,?,?)";
+			
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, td_member_id);
+			pstmt.setString(2, td_member_pw);
+			pstmt.setString(3, td_member_name);
+			pstmt.setString(4, td_member_email);
+			pstmt.setString(5, td_member_addr);
+			pstmt.setString(6, td_member_pn);
+			pstmt.setString(7, td_member_phone1);
+			pstmt.setString(8, td_member_phone2);
+			pstmt.setString(9, td_member_phone3);
+			
+
+			if (pstmt.executeUpdate() == 1) {
+				request.setAttribute("r", "회원 가입 성공");
+			} else {
+				request.setAttribute("r", "회원 가입 실패");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			request.setAttribute("r", "회원 가입 실패");
+		} finally {
+			DBManager.close(con, pstmt, null);
+		}
+	}
+}

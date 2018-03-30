@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function go(){
+		location.href="jsp/join/join.jsp";
+	}
+</script>
+</head>
+<body>
+	<form>
+		<table>
+			<tr>
+	
+				<td><img src="img/id.png" class="logimg">&nbsp;&nbsp;</td>
+				<td><input class="logininput">&nbsp;&nbsp;</td>
+				
+				<td><img src="img/pw.png" class="logimg">&nbsp;&nbsp;</td>
+				<td><input class="logininput">&nbsp;&nbsp;</td>
+				
+				<td>&nbsp;&nbsp;<a href=""><img src="img/login.png" class="logimg"></a></td>
+				<td>&nbsp;&nbsp;<a href="JoinController"><img src="img/join.png" class="logimg"></a></td>
+				<td>&nbsp;&nbsp;<a href="QnaController"><img src="img/qna.png" class="logimg"></a></td>
+				<td>&nbsp;&nbsp;<a href="#"><img src="img/research.png" class="logimg"></a></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
